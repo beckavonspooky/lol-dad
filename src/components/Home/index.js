@@ -4,8 +4,11 @@ import React, {Component} from 'react'
 class Home extends Component{
     render(){
         return(
-            <h1>i literally can not!
-            </h1>
+            <div className='taglines'>
+                <h3> Your favorite dad jokes on a click.</h3>
+                <button>Lets get some LOLs</button>
+            </div>
+            
         )
     }
 
