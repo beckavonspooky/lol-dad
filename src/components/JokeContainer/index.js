@@ -7,19 +7,30 @@ class JokeContainer extends Component{
         joke: []
     }
 
+    handleChange = e =>{
+        this.setState({
+            [e.target.name] : e.target.value
+        })
+    }
+
     componentDidMount(){
         this.getJokes();
     }
 
     getJokes = async () => {
         try {
-             const joke = await fetch('https://icanhazdadjoke.com/', {
+            const joke = await fetch('https://icanhazdadjoke.com/', {
             headers: {
                 'Accept': 'application/json'
         }
-    })
-    const jokeToJson = await joke.json()
-    console.log(jokeToJson, 'parsed Joke')
+        })
+        const jokeToJson = await joke.json()
+        console.log(jokeToJson, 'parsed Joke')
+
+        this.setState({ 
+            joke: jokeToJson.joke
+        })
+        
             
         } catch (err) {
             console.log(err, 'it didnt work bitch')
@@ -43,10 +54,11 @@ class JokeContainer extends Component{
                 }}
                 >
                 <h2>This is the Joke Container</h2>
-                <h2 joke = {this.state.joke}>this is the joke</h2>
+                <h2>{this.state.joke}</h2>
                 
+
             
-                <button type= 'submit'>Get Jokes</button>
+                <button onClick={this.getJokes}>Get Jokes</button>
                 
 
             </div>
