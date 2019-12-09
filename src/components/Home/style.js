@@ -10,3 +10,13 @@
 
 // export default HeaderImage
 
+// import styled from 'styled-components';
+// import splashimage from '../../images/splashimage.jpg'
+
+// const HeaderImage = styled.div`
+//   width: 200px;
+//   height: 200px;
+//   border: 2px solid black;
+//   background-image: url(${splashimage});`
+
+// export default HeaderImage

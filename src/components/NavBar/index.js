@@ -5,7 +5,7 @@ import * as ROUTES from '../../constants/routes'
 
 const NavBar = () =>{
     return(
-        <div className="NavBar">
+        <div className="NavBar" >
                 <NavLink to={ROUTES.HOME}>Home</NavLink>
                 <NavLink to={ROUTES.LOGIN}>Login</NavLink>
                 <NavLink to={ROUTES.SIGN_UP}>Signup</NavLink>

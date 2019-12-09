@@ -1,40 +1,36 @@
 import React, {Component} from 'react'
 import main from '../../images/main.jpg'
 
+
 class JokeContainer extends Component{
     state ={
-        getJokes: [],
-
+        joke: []
     }
 
-    handleChange = e =>{
-        this.setState({
-            [e.target.name] : e.target.value
-        })
-    }
-    
-    async componentDidMount(){
-        this.doGetJokes()
-
+    componentDidMount(){
+        this.getJokes();
     }
 
-    doGetJokes = async () =>{
+    getJokes = async () => {
         try {
-            const jokes = await fetch('https://icanhazdadjoke.com/', {
-
-                method: 'POST',
-                body: JSON.stringify(jokes),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })  
+             const joke = await fetch('https://icanhazdadjoke.com/', {
+            headers: {
+                'Accept': 'application/json'
+        }
+    })
+    const jokeToJson = await joke.json()
+    console.log(jokeToJson, 'parsed Joke')
+            
         } catch (err) {
-            console.log(err)
+            console.log(err, 'it didnt work bitch')
             
         }
     }
+    
 
     render(){
+        console.log(this.state.joke,'the state')
+        
         return(
             <div className="MainPhoto" 
                 style={{
@@ -46,9 +42,12 @@ class JokeContainer extends Component{
                 "backgroundImage": `url(${main})`
                 }}
                 >
-                <h1>This is the Joke Container</h1>
-
-                <button onClick={this.doGetJokes}>Get Jokes</button>
+                <h2>This is the Joke Container</h2>
+                <h2 joke = {this.state.joke}>this is the joke</h2>
+                
+            
+                <button type= 'submit'>Get Jokes</button>
+                
 
             </div>
         )
