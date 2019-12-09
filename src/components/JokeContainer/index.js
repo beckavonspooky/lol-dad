@@ -56,8 +56,6 @@ class JokeContainer extends Component{
                 <h2>This is the Joke Container</h2>
                 <h2>{this.state.joke}</h2>
                 
-
-            
                 <button onClick={this.getJokes}>Get Jokes</button>
                 
 
