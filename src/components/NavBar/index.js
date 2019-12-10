@@ -22,15 +22,7 @@ const NavBar = () =>{
                 </div>
             </div>
         </div>
-        // <div className="NavBar">
-        //     <div className='Header'>
-        //         <h1>LOL dad.</h1>
-        //         <p>Your favorite dad jokes on a click.</p>
-        //     </div>
-        //     <div>
-
-        //     </div>
-        // </div>
+        
     )
 }
 
