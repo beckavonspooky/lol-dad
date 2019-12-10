@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import { doCreateUserWithEmailAndPassword, doCreateUserInFirestore } from '../../firebase/firebase'
-
-
-
-
 class SignUpWithEmailPassword extends Component {
     state = {
         username: '',

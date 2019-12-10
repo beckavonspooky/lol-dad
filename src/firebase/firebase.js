@@ -26,10 +26,14 @@ const doCreateUserInFirestore = user => {
         .set(user)
 }
 
+const doSignInWithEmailAndPassword = (email, password) =>
+    auth.signInWithEmailAndPassword(email, password)
+
 
 export {
     firebase,
     auth,
     doCreateUserWithEmailAndPassword,
-    doCreateUserInFirestore
+    doCreateUserInFirestore,
+    doSignInWithEmailAndPassword
 }
