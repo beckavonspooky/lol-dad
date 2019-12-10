@@ -25,6 +25,7 @@ class SignUpWithEmailPassword extends Component {
             }
             doCreateUserInFirestore(user)
         })
+        this.props.history.push('/jokes') //this is basically a redirect
     }
 
     handleChange = e => this.setState({[e.target.name]: e.target.value})
