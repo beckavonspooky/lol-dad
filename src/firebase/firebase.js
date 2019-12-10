@@ -43,6 +43,10 @@ const doGetCurrentUser = id =>
         .doc(id)
         .get()
 
+const doGetUserJokes = userId => db.collection('jokes').where('userId', '==', userId).get()
+
+const doGetOneJoke = jokeId => db.collection('jokes').doc(jokeId).get()
+
 
 export {
     firebase,
@@ -51,5 +55,7 @@ export {
     doCreateUserInFirestore,
     doSignInWithEmailAndPassword,
     doSaveJoke,
-    doGetCurrentUser
+    doGetCurrentUser,
+    doGetUserJokes,
+    doGetOneJoke
 }

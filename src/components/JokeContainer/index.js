@@ -32,8 +32,7 @@ class JokeContainer extends Component{
         this.setState({ 
             joke: jokeToJson
         })
-        
-            
+             
         } catch (err) {
             console.log(err, '<------ it didnt work bitch')
             
@@ -46,7 +45,6 @@ class JokeContainer extends Component{
         doSaveJoke(currentUserId, jokeId)
     }
     
-
     render(){
         console.log(this.state.joke,'<----the state')
         const { currentUser } = this.props
@@ -71,8 +69,6 @@ class JokeContainer extends Component{
                      : null
                 }
                 
-                
-
             </div>
         )
     }

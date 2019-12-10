@@ -18,9 +18,13 @@ class App extends Component {
     currentUser: null,
   }
   componentDidMount() {
-    auth.onAuthStateChanged(async authUser => {
-      const currentUser = await doGetCurrentUser(authUser.uid)
-      this.setState({currentUser: currentUser.data()})
+    auth.onAuthStateChanged( authUser => {
+      console.log(authUser)
+      doGetCurrentUser(authUser.uid)
+        .then(snapshot => {
+          console.log(snapshot.data(), "snapped")
+          this.setState({currentUser: snapshot.data()})
+        })
     })
   }
 
@@ -37,7 +41,7 @@ class App extends Component {
 
           <Route exact path={ROUTES.SIGN_UP} component= {SignUpWithEmailPassword}/>
           <Route exact path={ROUTES.LOGIN} component={Login}/>
-          <Route exact path={ROUTES.FAVSLIST} component={FavoritesList}/>
+          <Route exact path={ROUTES.FAVSLIST} render={() => <FavoritesList currentUser={currentUser}/>}/>
         </Switch>
       </div>
     );
