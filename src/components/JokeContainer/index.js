@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import favlist from '../../images/favlist.jpg'
+import mainphoto from '../../images/main.jpg'
 
 
 class JokeContainer extends Component{
@@ -50,7 +50,7 @@ class JokeContainer extends Component{
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",
                 "backgroundSize": "cover",
-                "backgroundImage": `url(${favlist})`
+                "backgroundImage": `url(${mainphoto})`
                 }}
                 >
                 <h2>This is the Joke Container</h2>

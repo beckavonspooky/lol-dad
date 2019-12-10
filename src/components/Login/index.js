@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { doSignInWithEmailAndPassword } from '../../firebase/firebase'
 
 import * as ROUTES from '../../constants/routes'
-
-
 class Login extends Component {
     state = {
         email: '',
@@ -28,9 +26,11 @@ class Login extends Component {
 
     render(){
         const { email, password } = this.state
+        console.log(email, '<---- state change')
         return(
             <div>
             <h4>Login</h4>
+            
 
             <form onSubmit={this.onSubmit}>
                 <input type='text' name='email'  placeholder="EMAIL" value={email} onChange={this.onChange}/>

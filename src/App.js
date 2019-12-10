@@ -5,36 +5,18 @@ import Home from './components/Home'
 import JokeContainer from './components/JokeContainer'
 import SignUpWithEmailPassword from './components/SignUpWithEmailPassword'
 import Login from './components/Login'
-
+import FavoritesList from './components/FavoritesList';
 
 import * as ROUTES from './constants/routes'
+// import { auth } from './firebase/firebase'
 
 import './App.css';
 
 
 class App extends Component {
-//   state={
-//     currentUser: null
-//   }
 
-//   componentDidMount(){
-//     auth.onAuthStateChanged(authUser => {
-//         authUser
-//         ?
-//         this.setState({
-//             currentUser: {
-//                 displayName: auth.username
-//             }
-//         })
-//         : this.setState({CurrentUser:null})
-//     })
-// }
-// doSetCurrentUser = currentUser =>{
-//     this.setState({
-//         currentUser
-//     })
-// }
   render(){
+
     return (
       <div className="App" >
         <NavBar />
@@ -44,6 +26,7 @@ class App extends Component {
 
           <Route exact path={ROUTES.SIGN_UP} component= {SignUpWithEmailPassword}/>
           <Route exact path={ROUTES.LOGIN} component={Login}/>
+          <Route exact path={ROUTES.FAVSLIST} component={FavoritesList}/>
         </Switch>
       </div>
     );
