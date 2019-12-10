@@ -8,21 +8,32 @@ import Login from './components/Login'
 import FavoritesList from './components/FavoritesList';
 
 import * as ROUTES from './constants/routes'
-// import { auth } from './firebase/firebase'
+import { auth, doGetCurrentUser} from './firebase/firebase'
 
 import './App.css';
 
 
 class App extends Component {
+  state={
+    currentUser: null,
+  }
+  componentDidMount() {
+    auth.onAuthStateChanged(async authUser => {
+      const currentUser = await doGetCurrentUser(authUser.uid)
+      this.setState({currentUser: currentUser.data()})
+    })
+  }
+
 
   render(){
+    const { currentUser } = this.state
 
     return (
       <div className="App" >
-        <NavBar />
+        <NavBar currentUser={this.state.currentUser}/>
          <Switch>
           <Route exact path={ROUTES.HOME} component= {Home}/>
-          <Route exact path={ROUTES.JOKES} component= {JokeContainer}/>
+          <Route exact path={ROUTES.JOKES} render= {() => <JokeContainer currentUser={currentUser}/>}/>
 
           <Route exact path={ROUTES.SIGN_UP} component= {SignUpWithEmailPassword}/>
           <Route exact path={ROUTES.LOGIN} component={Login}/>

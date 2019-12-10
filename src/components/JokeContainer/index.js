@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
+import {withRouter} from 'react-router-dom'
 import mainphoto from '../../images/main.jpg'
+import { doSaveJoke } from '../../firebase/firebase'
 
 
 class JokeContainer extends Component{
@@ -25,23 +27,29 @@ class JokeContainer extends Component{
         }
         })
         const jokeToJson = await joke.json()
-        console.log(jokeToJson, 'parsed Joke')
+        console.log(jokeToJson, '<----- parsed Joke')
 
         this.setState({ 
-            joke: jokeToJson.joke
+            joke: jokeToJson
         })
         
             
         } catch (err) {
-            console.log(err, 'it didnt work bitch')
+            console.log(err, '<------ it didnt work bitch')
             
         }
+    }
+
+    saveJoke = () => {
+        const jokeId = this.state.joke.id
+        const currentUserId = this.props.currentUser._id
+        doSaveJoke(currentUserId, jokeId)
     }
     
 
     render(){
-        console.log(this.state.joke,'the state')
-        
+        console.log(this.state.joke,'<----the state')
+        const { currentUser } = this.props
         return(
             <div className="MainPhoto" 
                 style={{
@@ -54,9 +62,15 @@ class JokeContainer extends Component{
                 }}
                 >
                 <h2>This is the Joke Container</h2>
-                <h2>{this.state.joke}</h2>
+                <h2>{this.state.joke.joke}</h2>
                 
                 <button onClick={this.getJokes}>Get Jokes</button>
+                {
+                    currentUser
+                     ? <button onClick={this.saveJoke}>Save Joke</button>
+                     : null
+                }
+                
                 
 
             </div>
@@ -64,4 +78,4 @@ class JokeContainer extends Component{
     }
 }
 
-export default JokeContainer
+export default withRouter(JokeContainer)

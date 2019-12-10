@@ -29,11 +29,27 @@ const doCreateUserInFirestore = user => {
 const doSignInWithEmailAndPassword = (email, password) =>
     auth.signInWithEmailAndPassword(email, password)
 
+const doSaveJoke = (userId, jokeId) => {
+    db.collection('jokes')
+        .doc()
+        .set({
+            userId,
+            jokeId
+        })
+}
+
+const doGetCurrentUser = id =>
+    db.collection('users')
+        .doc(id)
+        .get()
+
 
 export {
     firebase,
     auth,
     doCreateUserWithEmailAndPassword,
     doCreateUserInFirestore,
-    doSignInWithEmailAndPassword
+    doSignInWithEmailAndPassword,
+    doSaveJoke,
+    doGetCurrentUser
 }
