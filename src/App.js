@@ -13,6 +13,27 @@ import './App.css';
 
 
 class App extends Component {
+//   state={
+//     currentUser: null
+//   }
+
+//   componentDidMount(){
+//     auth.onAuthStateChanged(authUser => {
+//         authUser
+//         ?
+//         this.setState({
+//             currentUser: {
+//                 displayName: auth.username
+//             }
+//         })
+//         : this.setState({CurrentUser:null})
+//     })
+// }
+// doSetCurrentUser = currentUser =>{
+//     this.setState({
+//         currentUser
+//     })
+// }
   render(){
     return (
       <div className="App" >

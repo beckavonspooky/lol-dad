@@ -19,6 +19,7 @@ const NavBar = () =>{
                     <NavLink to={ROUTES.SIGN_UP}>Signup</NavLink>
                     <NavLink to={ROUTES.JOKES}>Get Jokes</NavLink>
                     <NavLink to={ROUTES.FAVSLIST}>Favorites List</NavLink>
+                    <NavLink to={ROUTES.LOGOUT}>Logout</NavLink>
                 </div>
             </div>
         </div>

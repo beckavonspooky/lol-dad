@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import { doCreateUserWithEmailAndPassword, doCreateUserInFirestore } from '../../firebase/firebase'
+
+import * as ROUTES from '../../constants/routes'
 class SignUpWithEmailPassword extends Component {
     state = {
         username: '',
@@ -21,7 +23,7 @@ class SignUpWithEmailPassword extends Component {
             }
             doCreateUserInFirestore(user)
         })
-        this.props.history.push('/jokes') //this is basically a redirect
+        this.props.history.push(ROUTES.JOKES) //this is basically a redirect
     }
 
     handleChange = e => this.setState({[e.target.name]: e.target.value})
