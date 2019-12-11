@@ -28,6 +28,63 @@ p{
   margin-top: -4%;
 
 }
+h2{
+  padding:10px;
+}
+
+.speech-bubble{
+  text-align: center;
+  background-color: #5177994f;
+  width: 35%;
+  height: 31%;
+  line-height: 34px;
+  position: relative;
+  top: 10%;
+  left: 5%;
+  padding: 10px;
+  border-radius: 3.7em;
+
+}
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 56px solid transparent;
+  border-top-color: #5177994f;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -28px;
+  margin-bottom: -56px;
+}
+/* button{
+padding:0.35em 1.2em;
+ border:0.1em solid #FFFFFF;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.12em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ text-align:center;
+ transition: all 0.2s;
+} */
+.getJoke-button{
+  text-align: left;
+  position: relative;
+  top: 23%;
+  left: 15%;
+}
+.save-button{
+  text-align: left;
+  position: relative;
+  top: 26%;
+  left: 15%;
+}
+
 
 
 

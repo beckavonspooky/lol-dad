@@ -31,12 +31,12 @@ const doSignInWithEmailAndPassword = (email, password) =>
 
 const doSignOut = () => auth.signOut()
 
-const doSaveJoke = (userId, jokeId) => {
+const doSaveJoke = (userId, joke) => {
     db.collection('jokes')
         .doc()
         .set({
             userId,
-            jokeId
+            joke
         })
 }
 
@@ -47,7 +47,9 @@ const doGetCurrentUser = id =>
 
 const doGetUserJokes = userId => db.collection('jokes').where('userId', '==', userId).get()
 
-const doGetOneJoke = jokeId => db.collection('jokes').doc(jokeId).get()
+// const doGetOneJoke = jokeId => db.collection('jokes').doc(jokeId).get()
+
+const doDeleteOneJoke = jokeId => db.collection('jokes').doc(jokeId).delete()
 
 
 export {
@@ -60,5 +62,5 @@ export {
     doSaveJoke,
     doGetCurrentUser,
     doGetUserJokes,
-    doGetOneJoke
+    doDeleteOneJoke
 }

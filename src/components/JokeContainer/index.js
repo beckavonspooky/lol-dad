@@ -40,9 +40,8 @@ class JokeContainer extends Component{
     }
 
     saveJoke = () => {
-        const jokeId = this.state.joke.id
         const currentUserId = this.props.currentUser._id
-        doSaveJoke(currentUserId, jokeId)
+        doSaveJoke(currentUserId, this.state.joke)
     }
     
     render(){
@@ -59,15 +58,19 @@ class JokeContainer extends Component{
                 "backgroundImage": `url(${mainphoto})`
                 }}
                 >
-                <h2>This is the Joke Container</h2>
-                <h2>{this.state.joke.joke}</h2>
-                
-                <button onClick={this.getJokes}>Get Jokes</button>
-                {
-                    currentUser
-                     ? <button onClick={this.saveJoke}>Save Joke</button>
-                     : null
-                }
+                <div className='speech-bubble'>
+                    <h2>{this.state.joke.joke}</h2>
+                </div>
+                <div className='getJoke-button'>
+                    <button onClick={this.getJokes}>Get Jokes</button>
+                </div>
+                <div className='save-button'>
+                    {
+                        currentUser
+                        ? <button onClick={this.saveJoke}>Save Joke</button>
+                         : null
+                    }
+                </div>
                 
             </div>
         )
