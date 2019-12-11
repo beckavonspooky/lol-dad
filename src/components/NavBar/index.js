@@ -1,9 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+
 import * as ROUTES from '../../constants/routes'
 
-const NavBar = () =>{
+const NavBar = (props) =>{
     return(
         <div className='Nav'>
             <div className="Nav-Header">
@@ -11,26 +12,32 @@ const NavBar = () =>{
                     <NavLink to={ROUTES.HOME}>LOL dad.</NavLink>
                 </div>
                 <div className='Nav-Center'>
+                    {
+                        props.currentUser 
+                        ?
+                        <h3>{props.username}</h3>
+                        :
+                        ''
+                    }
 
                 </div>
-                <div className='Nav-Right'>
-                    <NavLink to={ROUTES.HOME}>Home</NavLink>
-                    <NavLink to={ROUTES.LOGIN}>Login</NavLink>
-                    <NavLink to={ROUTES.SIGN_UP}>Signup</NavLink>
-                    <NavLink to={ROUTES.JOKES}>Get Jokes</NavLink>
-                    <NavLink to={ROUTES.FAVSLIST}>Favorites List</NavLink>
-                </div>
+                    {
+                        props.currentUser ? 
+                            <div className='Nav-Right'>
+                                <NavLink to={ROUTES.HOME}>Home</NavLink>
+                                <NavLink to={ROUTES.JOKES}>Get Jokes</NavLink>
+                                <NavLink to={ROUTES.FAVSLIST}>Favorites List</NavLink>
+                                <NavLink to={ROUTES.HOME} onClick={() => {props.logout()}}>Logout</NavLink>
+                            </div>
+                        :
+                            <div className='Nav-Right'>
+                                <NavLink to={ROUTES.LOGIN}>Login</NavLink>
+                                <NavLink to={ROUTES.SIGN_UP}>Signup</NavLink>
+                            </div>
+                    }
             </div>
         </div>
-        // <div className="NavBar">
-        //     <div className='Header'>
-        //         <h1>LOL dad.</h1>
-        //         <p>Your favorite dad jokes on a click.</p>
-        //     </div>
-        //     <div>
-
-        //     </div>
-        // </div>
+        
     )
 }
 
