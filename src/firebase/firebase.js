@@ -29,6 +29,8 @@ const doCreateUserInFirestore = user => {
 const doSignInWithEmailAndPassword = (email, password) =>
     auth.signInWithEmailAndPassword(email, password)
 
+const doSignOut = () => auth.signOut()
+
 const doSaveJoke = (userId, jokeId) => {
     db.collection('jokes')
         .doc()
@@ -54,6 +56,7 @@ export {
     doCreateUserWithEmailAndPassword,
     doCreateUserInFirestore,
     doSignInWithEmailAndPassword,
+    doSignOut,
     doSaveJoke,
     doGetCurrentUser,
     doGetUserJokes,

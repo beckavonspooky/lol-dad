@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+
 import * as ROUTES from '../../constants/routes'
 
 const NavBar = (props) =>{
@@ -26,7 +27,7 @@ const NavBar = (props) =>{
                                 <NavLink to={ROUTES.HOME}>Home</NavLink>
                                 <NavLink to={ROUTES.JOKES}>Get Jokes</NavLink>
                                 <NavLink to={ROUTES.FAVSLIST}>Favorites List</NavLink>
-                                <NavLink to={ROUTES.LOGOUT}>Logout</NavLink>
+                                <NavLink to={ROUTES.HOME} onClick={() => {props.logout()}}>Logout</NavLink>
                             </div>
                         :
                             <div className='Nav-Right'>

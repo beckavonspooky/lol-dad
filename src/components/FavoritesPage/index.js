@@ -1,49 +1,48 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import { doGetUserJokes, doGetOneJoke } from '../../firebase/firebase'
-
+import { doGetUserJokes } from '../../firebase/firebase'
 
 import favlist from '../../images/favlist.jpg'
 
-class FavoritesList extends Component {
+class FavoritesPage extends Component {
     state = {
-        savedJokeId: []
-
+        savedJokeId: [],
+        savedJokes: []
     }
-
 
     async componentDidMount() {
-        this.getUserJokes()
-        const jokeId = this.props.match.params.id 
-        const resJoke = await fetch(`https://icanhazdadjoke.com/j/${jokeId}`,{
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        const jokeJson = await resJoke.json()
-        console.log(jokeJson, '<---parsed Joke')
-
-        this.setState({
-            savedJokeId: jokeJson.jokeId
-        })
-
+        this.getUserJokesId()
     }
-    getUserJokes = () => {
+
+    getUserJokesId = () => {
         doGetUserJokes(this.props.currentUser._id)
             .then(snapshot => {
                 const jokeIds = []
                 snapshot.forEach(doc => {
-                    console.log(doc.data(), "this is one joke")
+                    // console.log(doc.data(), "this is one joke")
                     jokeIds.push(doc.data().jokeId)
                 })
                 this.setState({
                     savedJokeId: jokeIds
+                }, () => {
+                    this.getUserJokes()
                 })
             })
     }
 
+    getUserJokes = () => {
+        Promise.all(this.state.savedJokeId.map(async savedJoke => {
+            let url = `https://icanhazdadjoke.com/j/${savedJoke}`
+            let joke = await fetch(url)
+            let jokeToJson = await joke.json()
+            return jokeToJson
+        })).then(response => this.setState({savedJokes: response}))
+    }
+
     render() {
-        console.log(this.state.savedJokeId, "saved jokes")
+        // console.log(this.state.savedJokeId, "saved jokes IDS")
+        // console.log(this.state.savedJokes, '<======== HIHIHI')
+        
         return (
             <div className="Favlist"
                 style={{
@@ -56,11 +55,13 @@ class FavoritesList extends Component {
                 }}
             >
                 <h2>this is the favorits list</h2>
-                <h2>{this.state.savedJoke}</h2>
+                
                 <button type='submit'>Delete Joke</button>
-
+                {
+                    this.state.savedJokes.map(j => <h3>{j.joke}</h3>)
+                }
             </div>
         )
     }
 }
-export default withRouter(FavoritesList)
+export default withRouter(FavoritesPage)

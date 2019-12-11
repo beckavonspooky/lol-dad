@@ -6,7 +6,7 @@ import { doSaveJoke } from '../../firebase/firebase'
 
 class JokeContainer extends Component{
     state ={
-        joke: []
+        joke: {}
     }
 
     handleChange = e =>{
@@ -22,19 +22,19 @@ class JokeContainer extends Component{
     getJokes = async () => {
         try {
             const joke = await fetch('https://icanhazdadjoke.com/', {
-            headers: {
-                'Accept': 'application/json'
-        }
-        })
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
         const jokeToJson = await joke.json()
-        console.log(jokeToJson, '<----- parsed Joke')
+        // console.log(jokeToJson, '<----- parsed Joke')
 
         this.setState({ 
             joke: jokeToJson
         })
              
         } catch (err) {
-            console.log(err, '<------ it didnt work bitch')
+            console.log(err, '<------ it didnt work')
             
         }
     }
