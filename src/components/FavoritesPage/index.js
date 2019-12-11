@@ -56,10 +56,16 @@ class FavoritesPage extends Component {
             >
                 <h2>this is the favorits list</h2>
                 
-                <button type='submit'>Delete Joke</button>
                 {
-                    this.state.savedJokes.map(j => <h3>{j.joke}</h3>)
+                    this.state.savedJokes.map(j => 
+                        <div>
+                    <h3>{j.joke}</h3> 
+                    <button type='submit'>Delete Joke</button>
+                    </div>
+                    )
+                    
                 }
+                <button type='submit'>Delete Joke</button>
             </div>
         )
     }
