@@ -50,8 +50,8 @@ class JokeContainer extends Component{
         return(
             <div className="MainPhoto" 
                 style={{
-                "width": "65rem", 
-                "height": "45rem", 
+                "width": "100%", 
+                "height": "35rem", 
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",
                 "backgroundSize": "cover",
