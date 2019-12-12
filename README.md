@@ -5,7 +5,7 @@
 
 
 ## Description
-* LOL dad is an application that allows users to get their favorite dad jokes in just ONE click! Need a way to break the ice? Just ask dad joke! 
+* LOL dad is an application that allows users to get their favorite dad jokes in just ONE click! Need a way to break the ice? Just grab a dad joke! 
 
 ## Getting Started
 
