@@ -39,7 +39,7 @@ class FavoritesPage extends Component {
         return (
             <div className="Favlist"
                 style={{
-                    "width": "65rem",
+                    "width": "100%",
                     "height": "45rem",
                     "backgroundPosition": "center",
                     "backgroundRepeat": "no-repeat",
