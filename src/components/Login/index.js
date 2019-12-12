@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import { doSignInWithEmailAndPassword } from '../../firebase/firebase'
-import { Button, Form } from 'semantic-ui-react'
+import login from '../../images/login.jpg'
 
 
 import * as ROUTES from '../../constants/routes'
@@ -48,6 +48,7 @@ class Login extends Component {
                
             <div className='Form'>
             <h1>Login</h1>
+            <img src={login}/>
                 <form onSubmit={this.onSubmit}>
                     <input type='text' name='email'  placeholder="EMAIL" value={email} onChange={this.onChange}/><br/>
                     <input type='text' name='password' placeholder="PASSWORD" value={password} onChange={this.onChange}/><br/>

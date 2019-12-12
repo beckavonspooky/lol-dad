@@ -233,9 +233,7 @@ input{
   height: 45px;
   width: 25%;
 }
-/* 
-.register-image{
-  position: relative;
-  left: 45%;
 
-} */
+img{
+  height: 290px;
+}

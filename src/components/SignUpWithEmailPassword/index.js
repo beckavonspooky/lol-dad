@@ -32,10 +32,9 @@ class SignUpWithEmailPassword extends Component {
     render(){
         return (
             <div className='register'>
-                <div className='register-header'>
+                <div className='Form'>
                 <h1>SIGNUP</h1>
-                </div>
-                <div className='register-form'>
+                <img src={register}/>
                     <form onSubmit={this.doSignUpWithEmailPassword}>
                         <input 
                             type='text' 
@@ -48,9 +47,6 @@ class SignUpWithEmailPassword extends Component {
                         <input type='text' name='password'  placeholder="PASSWORD" value={this.state.password} onChange={this.handleChange}/><br/>
                         <button type='submit'>Sign Up</button>
                     </form>
-                        <div className='register-image'>
-                            <img src={register}/>
-                        </div>
 
                 </div>
             </div>
