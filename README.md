@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## LOL dad.
 
-## Available Scripts
 
-In the project directory, you can run:
+![Image of game play screen](https://i.imgur.com/bBsT3IW.png)
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description
+* LOL dad is an application that allows users to get their favorite dad jokes in just ONE click! Need a way to break the ice? Just ask dad joke! 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+![Image of game play screen](https://i.imgur.com/xiF2kHr.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+[Click To View!]()
+* Whether logged in or not, a user can fetch a dad joke with a click of a button. 
+* A joke is randomly generated via an API fetch. 
+* If a user likes a joke, they can signup to start raking up all the LOLs.
+* Saved jokes will be saved to a favorites list for easy on the go accessability.
+* If the user doesn't like the joke anymore, they can delete it from their list and start over. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Reactjs
+* ExpressJS
+* Node.js
+* Firebase
+* API
+* HTML5
+* CSS
+* Javascript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![Image of game play screen](https://i.imgur.com/k6kUSUX.png)
+ 
+## Next Steps:
+* Impliment responsive CSS
+* Add a feature for a user to create a joke.
+* A heart bubble after a joke is saved.
+* Disable save button after jokeId is stored to user. 
