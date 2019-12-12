@@ -35,8 +35,7 @@ class FavoritesPage extends Component {
     }
 
     render() {
-        console.log(this.state.savedJokeId, '<===== saved joke IDS')
-        console.log(this.state.savedJokes, '<----- Saved Jokes array here')
+    
         return (
             <div className="Favlist"
                 style={{

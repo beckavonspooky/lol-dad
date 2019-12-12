@@ -57,6 +57,8 @@ body {
   width: 33.333%;
   text-align: left;
   margin: 0 10px;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
 }
 
 .Nav-Center {
@@ -121,6 +123,7 @@ h2{
   border: 2px solid black;
   text-decoration: none;
 }
+
 .home-taglines a {
   text-decoration: none;
   color: black;
@@ -213,7 +216,7 @@ button{
 .favHeader{
   text-align: right;
   line-height: 5pc;
-  padding: 5%;
+  padding-right: 5%;
 
 }
 .favList{
@@ -236,4 +239,15 @@ input{
 
 img{
   height: 290px;
+}
+.joke-container-stamp{
+  position: relative;
+  top: -50%;
+  left: 52%;
+  width: 24%;
+  text-align: center;
+  /* border: 2px solid red; */
+  font-size: 42px;
+  transform: rotate(-16deg);
+
 }
