@@ -223,3 +223,19 @@ button{
   overflow: scroll;
   padding: 5%;
 }
+
+.Form{
+  text-align: center;
+
+
+}
+input{
+  height: 45px;
+  width: 25%;
+}
+/* 
+.register-image{
+  position: relative;
+  left: 45%;
+
+} */
