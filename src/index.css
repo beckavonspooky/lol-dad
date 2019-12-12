@@ -90,7 +90,7 @@ body {
 
 h1{
   padding-left: 3%;
-  padding-top: 5%;
+  padding-top: 6%;
   font-size: 50px;
   font-family: 'Anton', sans-serif;
   line-height: 5pc;
@@ -104,6 +104,7 @@ h2{
   padding:10px;
   font-family: 'Anton', sans-serif;
   line-height: 3pc;
+  font-size: 30px;
 }
 
 .home-container{
@@ -113,10 +114,10 @@ h2{
 
 .home-taglines{
   font-family: 'Roboto', sans-serif;
-  left: 23.5%;
+  left: 24.5%;
   text-align: center;
   position: relative;
-  top: 21.5%;
+  top: 23.5%;
   width: 112px;
   padding: 5px;
   font-size: 21px;
@@ -138,13 +139,15 @@ h2{
 .home-clickNow-button{
   position: relative;
   top: -43%;
-  left: 45%;
-  width: 24%;
+  left: 48%;
+  width: 19%;
   text-align: center;
-  border: 2px solid red;
-  font-size: 31px;
+  border: 5px solid red;
+  font-size: 40px;
+  padding: 5px;
   transform: rotate(-16deg);
 }
+
 .home-clickNow-button a {
   text-decoration: none;
   color:red;
@@ -203,13 +206,13 @@ button{
 .getJoke-button{
   text-align: left;
   position: relative;
-  top: 23%;
+  top: 19%;
   left: 15%;
 }
 .save-button{
   text-align: left;
   position: relative;
-  top: 26%;
+  top: 20%;
   left: 15%;
 }
 
@@ -222,7 +225,7 @@ button{
 .favList{
   text-align: right;
   line-height: 4pc;
-  height: 90vh;
+  height: 66vh;
   overflow: scroll;
   padding: 5%;
 }
@@ -242,12 +245,11 @@ img{
 }
 .joke-container-stamp{
   position: relative;
-  top: -50%;
+  top: -49%;
   left: 52%;
   width: 24%;
   text-align: center;
-  /* border: 2px solid red; */
-  font-size: 42px;
+  border: 5px solid red;
+  font-size: 53px;
   transform: rotate(-16deg);
-
 }

@@ -9,8 +9,8 @@ import * as ROUTES from '../../constants/routes'
 import splashimage from '../../images/splashimage.jpg'
 
 const style={
-    "width": "65em", 
-    "height": "35em", 
+    "width": "100%",
+    "height": "40rem", 
     "backgroundPosition": "center",
     "backgroundRepeat": "no-repeat",
     "backgroundSize": "cover",
