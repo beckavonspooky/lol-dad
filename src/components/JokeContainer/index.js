@@ -27,7 +27,6 @@ class JokeContainer extends Component{
                 }
             })
         const jokeToJson = await joke.json()
-        // console.log(jokeToJson, '<----- parsed Joke')
 
         this.setState({ 
             joke: jokeToJson
@@ -45,13 +44,13 @@ class JokeContainer extends Component{
     }
     
     render(){
-        console.log(this.state.joke,'<----the state')
+        
         const { currentUser } = this.props
         return(
             <div className="MainPhoto" 
                 style={{
-                "width": "65rem", 
-                "height": "45rem", 
+                "width": "100%", 
+                "height": "35rem", 
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",
                 "backgroundSize": "cover",
@@ -70,6 +69,9 @@ class JokeContainer extends Component{
                         ? <button onClick={this.saveJoke}>Save Joke</button>
                          : null
                     }
+                </div>
+                <div className='joke-container-stamp'>
+                    GOT JOKES?
                 </div>
                 
             </div>

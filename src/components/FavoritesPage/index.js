@@ -21,19 +21,7 @@ class FavoritesPage extends Component {
                 })
             })
     }
-    
-    // getUserJokes = () => {
-    //     Promise.all(this.state.savedJokeId.map(async savedJoke => {
-    //         console.log(`https://icanhazdadjoke.com/j/${savedJoke}`)
-    //         const joke = await fetch(`https://icanhazdadjoke.com/j/${savedJoke}`, {
-    //             mode: "no-cors"
-    //           })
-    //         const jokeToJson = await joke.json()
-    //         return jokeToJson
-    //     }))
-    //     .then(response => this.setState({savedJokes: response}))
-        
-    // }
+
     deleteOneJoke = (id) =>{
         console.log(id)
         doDeleteOneJoke(id)
@@ -45,9 +33,9 @@ class FavoritesPage extends Component {
             })
             .catch((err)=> console.log(err))
     }
+
     render() {
-        console.log(this.state.savedJokeId, '<===== saved joke IDS')
-        console.log(this.state.savedJokes, '<----- Saved Jokes array here')
+    
         return (
             <div className="Favlist"
                 style={{
@@ -58,18 +46,19 @@ class FavoritesPage extends Component {
                     "backgroundSize": "cover",
                     "backgroundImage": `url(${favlist})`
                 }}>
-                <h2>Favorite Jokes</h2>
-                
-                {
-                    this.state.savedJokes.map(j => 
-                        <div>
-                    <h3>{j.joke}</h3> 
-                    <button type='submit' onClick={()=> this.deleteOneJoke(j.uid)}>Delete Joke</button>
-                    </div>
-                    )
-                    
-                }
-                
+                <div className='favHeader'>
+                    <h1>Favorite Jokes</h1>
+                            </div>
+                        <div className='favList'>
+                            {
+                                this.state.savedJokes.map(j => 
+                                <div className='deletJoke'>
+                                    <p>{j.joke}</p> 
+                                    <button type='submit' onClick={()=> this.deleteOneJoke(j.uid)}>Delete Joke</button>
+                                </div>
+                                )
+                            }
+                        </div>
             </div>
         )
     }

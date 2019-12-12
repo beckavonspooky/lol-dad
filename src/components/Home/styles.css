@@ -1,0 +1,38 @@
+.home-container{
+    display: flex;
+    justify-content: center;
+}
+.info{
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    top: 6%;
+    left: 5%;
+    position: relative;
+    width: 32%;
+    font-size: 50px;
+    border-radius: 35px;
+  }
+  .taglines{
+    left: 22.5%;
+    text-align: center;
+    position: relative;
+    top: 30%;
+    width: 112px;
+    padding: 5px;
+    background-color: aliceblue;
+    font-size: 21px;
+    border-radius: 35px;
+  }
+  
+  .taglines-button{
+    position: relative;
+    top: 35%;
+    right: 22%;
+  }
+  
+  button{
+    width: 150px;
+  
+  }

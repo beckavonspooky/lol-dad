@@ -5,11 +5,12 @@ import {withRouter} from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
 
 
+
 import splashimage from '../../images/splashimage.jpg'
 
 const style={
-    "width": "65rem", 
-    "height": "45rem", 
+    "width": "65em", 
+    "height": "35em", 
     "backgroundPosition": "center",
     "backgroundRepeat": "no-repeat",
     "backgroundSize": "cover",
@@ -18,17 +19,19 @@ const style={
 }
 const Home = () => {
     return(
-        <div  style={style}>
-            {/* <div className='logo'>LOL dad.</div> */}
-            <div className='info'>As Told To You By Your Dad</div>
-            <div className='taglines'>
-                Your favorite dad jokes on a click.
-            </div>
-            <div className='taglines-button'>
-                <Link to={ROUTES.JOKES}>
-                    <button>CLICK NOW to get some LOLs</button>
-                </Link>
-            </div>
+        <div className="home-container">
+                <div  style={style}>
+                    <div className='speech-bubble'>
+                        <h1>"As Told To You By Your Dad"</h1>
+                    </div>
+                    <div className='home-taglines'>
+                    <Link to={ROUTES.JOKES}>Take 1 for LOLs</Link>
+                        
+                    </div>
+                        <div className='home-clickNow-button'>
+                            <Link to={ROUTES.JOKES}>Lets get this bread!</Link>
+                        </div>
+                </div>            
         </div>
     )
 }

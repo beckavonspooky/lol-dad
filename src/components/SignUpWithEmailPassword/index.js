@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import { doCreateUserWithEmailAndPassword, doCreateUserInFirestore } from '../../firebase/firebase'
+import register from '../../images/register.jpg'
 
 import * as ROUTES from '../../constants/routes'
 class SignUpWithEmailPassword extends Component {
@@ -30,20 +31,24 @@ class SignUpWithEmailPassword extends Component {
 
     render(){
         return (
-            <div>
+            <div className='register'>
+                <div className='Form'>
                 <h1>SIGNUP</h1>
-                <form onSubmit={this.doSignUpWithEmailPassword}>
-                    <input 
-                        type='text' 
-                        placeholder= 'USERNAME' 
-                        name="username"
-                        value={this.state.username}
-                        onChange={this.handleChange}
-                    />
-                    <input type='text' name='email'  placeholder="EMAIL" value={this.state.email} onChange={this.handleChange}/>
-                    <input type='text' name='password'  placeholder="PASSWORD" value={this.state.password} onChange={this.handleChange}/>
-                    <button type='submit'>Sign Up</button>
-                </form>
+                <img src={register}/>
+                    <form onSubmit={this.doSignUpWithEmailPassword}>
+                        <input 
+                            type='text' 
+                            placeholder= 'USERNAME' 
+                            name="username"
+                            value={this.state.username}
+                            onChange={this.handleChange}
+                        /> <br/>
+                        <input type='text' name='email'  placeholder="EMAIL" value={this.state.email} onChange={this.handleChange}/><br/>
+                        <input type='text' name='password'  placeholder="PASSWORD" value={this.state.password} onChange={this.handleChange}/><br/>
+                        <button type='submit'>Sign Up</button>
+                    </form>
+
+                </div>
             </div>
 
         )
