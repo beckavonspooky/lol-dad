@@ -95,9 +95,7 @@ h1{
 }
 
 p{
-  margin-left: 2%;
-  margin-top: -4%;
-
+  font-size: 20px;
 }
 
 h2{
@@ -210,4 +208,18 @@ button{
   position: relative;
   top: 26%;
   left: 15%;
+}
+
+.favHeader{
+  text-align: right;
+  line-height: 5pc;
+  padding: 5%;
+
+}
+.favList{
+  text-align: right;
+  line-height: 4pc;
+  height: 90vh;
+  overflow: scroll;
+  padding: 5%;
 }
