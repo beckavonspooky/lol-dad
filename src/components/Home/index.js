@@ -25,7 +25,8 @@ const Home = () => {
                         <h1>"As Told To You By Your Dad"</h1>
                     </div>
                     <div className='home-taglines'>
-                        <h3>Take 1 for LOLs</h3>
+                    <Link to={ROUTES.JOKES}>Take 1 for LOLs</Link>
+                        
                     </div>
                         <div className='home-clickNow-button'>
                             <Link to={ROUTES.JOKES}>Lets get this bread!</Link>

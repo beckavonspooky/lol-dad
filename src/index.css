@@ -88,6 +88,7 @@ body {
 
 h1{
   padding-left: 3%;
+  padding-top: 5%;
   font-size: 50px;
   font-family: 'Anton', sans-serif;
   line-height: 5pc;
@@ -105,31 +106,37 @@ h2{
   line-height: 3pc;
 }
 
-h3{
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-}
-
 .home-container{
   display: flex;
   justify-content: center;
 }
 
 .home-taglines{
-  display: flex;
+  font-family: 'Roboto', sans-serif;
   left: 23.5%;
   text-align: center;
   position: relative;
-  top: 30.5%;
+  top: 21.5%;
   width: 112px;
   padding: 5px;
   font-size: 21px;
   border: 2px solid black;
+  text-decoration: none;
 }
+.home-taglines a {
+  text-decoration: none;
+  color: black;
+  padding-left: 5%;
+}
+
+.home-taglines a:hover {
+  color: red;
+}
+
 
 .home-clickNow-button{
   position: relative;
-  top: -33%;
+  top: -43%;
   left: 45%;
   width: 24%;
   text-align: center;
@@ -150,7 +157,8 @@ h3{
 button{
   background-color: #ddd;
   border: none;
-  color: blueviolet;
+  background-color: #5177994f;
+  color: black;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -158,21 +166,21 @@ button{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 16px;
-
+  font-size: 25px;
+  outline: none;
 }
 
 .speech-bubble{
   text-align: center;
   background-color: #5177994f;
   width: 35%;
-  height: 31%;
+  height: 41%;
   line-height: 34px;
   position: relative;
-  top: 10%;
-  left: 5%;
+  top: 6%;
+  left: 4%;
   padding: 10px;
   border-radius: 3.7em;
-
 }
 
 .speech-bubble:after {
@@ -188,6 +196,7 @@ button{
   border-right: 0;
   margin-left: -28px;
   margin-bottom: -56px;
+  overflow: auto;
 }
 
 .getJoke-button{
