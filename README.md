@@ -12,7 +12,7 @@
 ![Image of game play screen](https://i.imgur.com/xiF2kHr.png)
 
 
-[Click To View!]()
+[Click To View!](https://lol-dad.firebaseapp.com/)
 * Whether logged in or not, a user can fetch a dad joke with a click of a button. 
 * A joke is randomly generated via an API fetch. 
 * If a user likes a joke, they can signup to start raking up all the LOLs.
