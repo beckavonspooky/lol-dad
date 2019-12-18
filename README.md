@@ -29,6 +29,7 @@
 * HTML5
 * CSS
 * Javascript ES6
+* Adobe Xd
 
 ![Image of game play screen](https://i.imgur.com/k6kUSUX.png)
  
