@@ -24,11 +24,11 @@
 * Reactjs
 * ExpressJS
 * Node.js
-* Firebase
-* API
+* Firebase (for authentication, storage, and database)
+* RESTful API
 * HTML5
 * CSS
-* Javascript
+* Javascript ES6
 
 ![Image of game play screen](https://i.imgur.com/k6kUSUX.png)
  
